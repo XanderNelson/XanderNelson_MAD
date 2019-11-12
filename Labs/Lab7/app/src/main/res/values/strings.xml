@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Lab7</string>
+    <string name="gtSwitch">GT</string>
+    <string name="gtText">new gt</string>
+    <string name="caps">Caps</string>
+    <string name="like">Do you like the GT?</string>
+    <string name="no">NO</string>
+    <string name="yes">YES</string>
+    <string name="fontSize">Font Size</string>
+    <string-array name="font_array">
+        <item>Small</item>
+        <item>Medium</item>
+        <item>Large</item>
+    </string-array>
+    <dimen name="textsizeOne">18sp</dimen>
+    <dimen name="textsizeTwo">22sp</dimen>
+    <dimen name="textsizeThree">26sp</dimen>
+
+</resources>
