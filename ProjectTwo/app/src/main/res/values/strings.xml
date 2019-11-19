@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">ProjectTwo</string>
+    <string name="email">EMAIL</string>
+    <string name="wish">WISH LIST ITEM</string>
+    <string name="makeWish">MAKE WISH</string>
+</resources>
