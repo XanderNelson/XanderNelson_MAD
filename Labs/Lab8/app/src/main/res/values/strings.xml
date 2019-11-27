@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Lab8</string>
+    <string name="heading">VEHICLE FINDER</string>
+    <string name="choose">Choose your vehicle type</string>
+    <string name="find">FIND VEHICLE</string>
+    <string-array name="list">
+        <item>Sports</item>
+        <item>Sedan</item>
+        <item>SUV</item>
+        <item>Pickup</item>
+    </string-array>
+    <string name="suggest">Your suggested vehicle</string>
+    <string name="title_activity_vehicle">VehicleActivity</string>
+    <string name="title_activity_vehicle_two">VehicleTwoActivity</string>
+</resources>
