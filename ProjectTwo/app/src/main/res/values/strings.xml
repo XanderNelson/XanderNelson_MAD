@@ -1,6 +1,24 @@
 <resources>
     <string name="app_name">ProjectTwo</string>
-    <string name="email">EMAIL</string>
+    <string name="first">FIRST NAME</string>
+    <string name="last">LAST NAME</string>
     <string name="wish">WISH LIST ITEM</string>
     <string name="makeWish">MAKE WISH</string>
+    <string name="link">ITEM LINK</string>
+    <string name="price">ITEM PRICE</string>
+    <string-array name="priceRange">
+        <item>$0-$25</item>
+        <item>$26-$50</item>
+        <item>$51-$75</item>
+        <item>$76-$100</item>
+        <item>$101-$150</item>
+        <item>$151-$200</item>
+        <item>$200+</item>
+    </string-array>
+    <string name="desOne">1</string>
+    <string name="desTwo">2</string>
+    <string name="desThree">3</string>
+    <string name="desFour">4</string>
+    <string name="desFive">5</string>
+    <string name="des">ITEM DESIRE RANK</string>
 </resources>

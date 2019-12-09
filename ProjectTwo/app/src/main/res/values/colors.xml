@@ -3,4 +3,11 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
+    <style name="christmasTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">#165B33</item>
+        <item name="colorPrimaryDark">#BB2528</item>
+        <item name="colorAccent">#F8B229</item>
+<!--        <item name="background">#D8D8D8</item>-->
+    </style>
 </resources>

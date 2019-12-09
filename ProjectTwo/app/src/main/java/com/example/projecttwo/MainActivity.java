@@ -6,16 +6,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Spinner;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.IgnoreExtraProperties;
+import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -36,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
 //    private DocumentReference myDoc = FirebaseFirestore.getInstance().document("wishList/test");
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     private static final String TAG = "MainActivity";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,17 +61,31 @@ public class MainActivity extends AppCompatActivity {
     public void addWish(View view){
 //        Toast.makeText(this, "Called", Toast.LENGTH_LONG).show();
 
-        EditText textEmail = (EditText) findViewById(R.id.nameText);
+        EditText textFirst = (EditText) findViewById(R.id.firstNameText);
+        EditText textLast = (EditText) findViewById(R.id.lastNameText);
         EditText textItem = (EditText) findViewById(R.id.wishItem);
-        String email = textEmail.getText().toString();
+        EditText textLink = (EditText) findViewById(R.id.textLink);
+        Spinner priceSpin = (Spinner) findViewById(R.id.spinner);
+        RadioGroup desGroup = (RadioGroup) findViewById(R.id.radioGroup);
+        int selectedDesireNum = desGroup.getCheckedRadioButtonId();
+
+        String firstName = textFirst.getText().toString();
+        String lastName = textLast.getText().toString();
         String item = textItem.getText().toString();
+        String link = textLink.getText().toString();
+        String price = priceSpin.getSelectedItem().toString();
+        RadioButton selectedRadioButton = (RadioButton) findViewById(selectedDesireNum);
+        String selectedDesire = selectedRadioButton.getText().toString();
 
 
         Map<String, Object> wishList = new HashMap<>();
-        wishList.put("NAME", email);
+        wishList.put("FIRSTNAME", firstName);
+        wishList.put("LASTNAME", lastName);
         wishList.put("ITEM", item);
+        wishList.put("LINK", link);
+        wishList.put("PRICE", price);
+        wishList.put("DESIRE", selectedDesire);
 
-// Add a new document with a generated ID
         db.collection("wishList")
                 .add(wishList)
                 .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {

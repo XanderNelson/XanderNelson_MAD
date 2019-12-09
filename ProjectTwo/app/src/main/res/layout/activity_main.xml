@@ -6,40 +6,141 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="109dp"
-        android:onClick="addWish"
-        android:text="@string/makeWish"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/wishItem" />
-
     <EditText
-        android:id="@+id/nameText"
-        android:layout_width="310dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="108dp"
+        android:id="@+id/firstNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
         android:ems="10"
-        android:hint="@string/email"
+        android:hint="@string/first"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/wishItem"
-        android:layout_width="305dp"
-        android:layout_height="47dp"
-        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="15dp"
         android:ems="10"
         android:hint="@string/wish"
         android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/textLink"
+        app:layout_constraintTop_toBottomOf="@+id/lastNameText" />
+
+    <EditText
+        android:id="@+id/lastNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:hint="@string/last"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/wishItem"
+        app:layout_constraintTop_toBottomOf="@+id/firstNameText" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:onClick="addWish"
+        android:text="@string/makeWish"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.458"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameText" />
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <EditText
+        android:id="@+id/textLink"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:hint="@string/link"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wishItem" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="159dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/des"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.448"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="50dp"
+        android:text="@string/price"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/spinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.441" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="0dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="62dp"
+        android:entries="@array/priceRange"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textLink" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="313dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <RadioButton
+            android:id="@+id/radioButton5"
+            android:layout_width="59dp"
+            android:layout_height="wrap_content"
+            android:text="@string/desOne" />
+
+        <RadioButton
+            android:id="@+id/radioButton4"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="@string/desTwo" />
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="66dp"
+            android:layout_height="wrap_content"
+            android:text="@string/desThree" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="61dp"
+            android:layout_height="wrap_content"
+            android:text="@string/desFour" />
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="63dp"
+            android:layout_height="wrap_content"
+            android:text="@string/desFive" />
+    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
