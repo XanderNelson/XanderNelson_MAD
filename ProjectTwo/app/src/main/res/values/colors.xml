@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorPrimary">#165B33</color>
+    <color name="colorPrimaryDark">#BB2528</color>
+    <color name="colorAccent">#F8B229</color>
 
     <style name="christmasTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">#165B33</item>

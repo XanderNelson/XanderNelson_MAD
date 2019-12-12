@@ -35,14 +35,21 @@ public class MainActivity extends AppCompatActivity {
 //    private DocumentReference myDoc = FirebaseFirestore.getInstance().document("wishList/test");
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     private static final String TAG = "MainActivity";
-
+//    EditText textFirst = findViewById(R.id.firstNameText);
+//    EditText textLast = findViewById(R.id.lastNameText);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+//        if (savedInstanceState != null){
+//            firstNam = savedInstanceState.getString("FirstName");
+//            lastNam = savedInstanceState.getString("LastName");
+//            textFirst.setText(firstNam);
+//            textLast.setText(lastNam);
+//        }
     }
+
 //    psuedo
 //        add more user imputs that clarify more what the wish is
 //        use these imputs to write to firebase
@@ -61,12 +68,12 @@ public class MainActivity extends AppCompatActivity {
     public void addWish(View view){
 //        Toast.makeText(this, "Called", Toast.LENGTH_LONG).show();
 
-        EditText textFirst = (EditText) findViewById(R.id.firstNameText);
-        EditText textLast = (EditText) findViewById(R.id.lastNameText);
-        EditText textItem = (EditText) findViewById(R.id.wishItem);
-        EditText textLink = (EditText) findViewById(R.id.textLink);
-        Spinner priceSpin = (Spinner) findViewById(R.id.spinner);
-        RadioGroup desGroup = (RadioGroup) findViewById(R.id.radioGroup);
+        EditText textFirst = findViewById(R.id.firstNameText);
+        EditText textLast = findViewById(R.id.lastNameText);
+        EditText textItem = findViewById(R.id.wishItem);
+        EditText textLink = findViewById(R.id.textLink);
+        Spinner priceSpin = findViewById(R.id.spinner);
+        RadioGroup desGroup = findViewById(R.id.radioGroup);
         int selectedDesireNum = desGroup.getCheckedRadioButtonId();
 
         String firstName = textFirst.getText().toString();
@@ -100,6 +107,15 @@ public class MainActivity extends AppCompatActivity {
                         Log.w(TAG, "Error adding document", e);
                     }
                 });
+        textItem.setText("");
+        textLink.setText("");
     }
-
+//    String firstNam = textFirst.getText().toString();
+//    String lastNam = textLast.getText().toString();
+//    @Override
+//    protected void onSaveInstanceState(Bundle outState) {
+//        super.onSaveInstanceState(outState);
+//        outState.putString("FirstName", firstNam);
+//        outState.putString("LastName", lastNam);
+//    }
 }
