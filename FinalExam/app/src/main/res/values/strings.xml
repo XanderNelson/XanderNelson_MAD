@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">FinalExam</string>
+    <string name="title">Burrito Builder</string>
+    <string name="build">BUILD</string>
+    <string name="hint">NAME</string>
+    <string name="meat">meat</string>
+    <string name="veggie">veggie</string>
+    <string name="find">Find Burrito</string>
+    <string name="suggest">This is your suggested burrito</string>
+    <string name="info">WEB INFO BUTTON-></string>
+    <string-array name="list">
+        <item>The Hill</item>
+        <item>29th Street</item>
+        <item>Pearl Street</item>
+    </string-array>
+    <string name="taco">Taco </string>
+    <string name="burrito">Burrito</string>
+    <string name="title_activity_burrito">BurritoActivity</string>
+    <string name="title_activity_burrito_two">BurritoTwoActivity</string>
+</resources>

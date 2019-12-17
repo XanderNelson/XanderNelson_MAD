@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <style name="themeTwo" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">#081534</item>
+        <item name="colorPrimaryDark">#2A6BAC</item>
+        <item name="colorAccent">#C6C6C6</item>
+        <item name="android:colorBackground">#B0E2FF</item>
+    </style>
+</resources>
